@@ -13,7 +13,8 @@ exports.create = (req, res) => {
     published: req.body.published ? req.body.published : false,
   });
 
-  Tutorial.save(tutorial)
+  tutorial
+    .save(tutorial)
     .then((data) => {
       res.send(data);
     })
